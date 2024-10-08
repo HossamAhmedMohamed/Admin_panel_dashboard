@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_tharwat_samy/constants/app_style.dart';
@@ -15,9 +17,13 @@ class inActiveDarwerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.image),
-      title: Text(
-        drawerItemModel.title,
-        style: AppStyles.styleMedium16(context),
+      title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          drawerItemModel.title,
+          style: AppStyles.styleMedium16(context),
+        ),
       ),
     );
   }
@@ -35,9 +41,13 @@ class ActiveDarwerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.image),
-      title: Text(
-        drawerItemModel.title,
-        style: AppStyles.styleBold16(context),
+      title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          drawerItemModel.title,
+          style: AppStyles.styleBold16(context),
+        ),
       ),
       trailing: Container(
         width: 3,

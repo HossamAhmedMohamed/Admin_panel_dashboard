@@ -26,13 +26,17 @@ class Assets {
   /// assets/images/dashboard.svg
   static const String imagesDashboard = "assets/images/dashboard.svg";
 
+  /// Assets for imagesGallery
+  /// assets/images/gallery.svg
+  static const String imagesGallery = "assets/images/gallery.svg";
+
   /// Assets for imagesLogout
   /// assets/images/logout.svg
   static const String imagesLogout = "assets/images/logout.svg";
 
   /// Assets for imagesMaskGroup
-  /// assets/images/Mask_group.svg
-  static const String imagesMaskGroup = "assets/images/Mask_group.svg";
+  /// assets/images/Mask_group.png
+  static const String imagesMaskGroup = "assets/images/Mask_group.png";
 
   /// Assets for imagesMoneys
   /// assets/images/moneys.svg

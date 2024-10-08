@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_tharwat_samy/constants/app_images.dart';
 import 'package:responsive_tharwat_samy/models/drawer_item_model.dart';
+import 'package:responsive_tharwat_samy/models/user_info_model.dart';
 import 'package:responsive_tharwat_samy/presentation/widgets/active_and_inactive_drawer.dart';
 import 'package:responsive_tharwat_samy/presentation/widgets/drawer_item_list_view.dart';
 import 'package:responsive_tharwat_samy/presentation/widgets/user_info_list_tile.dart';
@@ -11,26 +12,30 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width*.7,
       color: Colors.white,
-      child: const CustomScrollView(
+      child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
             child: UserInfoListTile(
-                img: Assets.imagesAvatar3,
-                title: "Lekan Okeowo",
-                subtitle: "demo@gmail.com"),
+              userInfoModel: UserInfoModel(
+                  img: Assets.imagesAvatar3,
+                  title: "Hossam Ahmed",
+                  subtitle: "hossaaamahmed6@gmail.com"),
+            ),
           ),
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: SizedBox(
               height: 8,
             ),
           ),
-          DrawerItemListView(),
-          SliverFillRemaining(
+          const DrawerItemListView(),
+          const SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
               children: [
-                Expanded(child: SizedBox(
+                Expanded(
+                    child: SizedBox(
                   height: 20,
                 )),
                 inActiveDarwerItem(
@@ -42,7 +47,7 @@ class CustomDrawer extends StatelessWidget {
               ],
             ),
           ),
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
               child: SizedBox(
             height: 48,
           ))
